@@ -1,0 +1,29 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: black;
+}
+
+.main {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.quote {
+    padding: 0 150px 100px 150px;
+    font-size: 3rem;
+    color: white;
+}
+
+.author {
+    font-size: 2rem;
+    color: #ffffff66;
+}
