@@ -15,8 +15,8 @@
     <title>QuoteIt</title>
 
     <!-- Links -->
-    <link rel="stylesheet" href="styles/style.css">
-    <script src="scripts/script.js"></script>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/scripts.js"></script>
 
     <!-- FontAwsome -->
     <script src="https://kit.fontawesome.com/9b6186208b.js" crossorigin="anonymous"></script>
