@@ -30,6 +30,33 @@
     <meta name="theme-color" content="#ffffff">
 </head>
 <body>
+    <!-- PHP -->
+    <?php
+        // Datenbankverbindung herstellen
+        $servername = "localhost";
+        $username = "root"; // Benutzername für Wampserver
+        $password = ""; // Passwort für Wampserver ist standardmäßig leer
+        $dbname = "citation";
+        $conn = new mysqli($servername, $username, $password, $dbname);
+
+        // SQL-Abfrage, um eine zufällige Zeile aus der Tabelle "citation" auszulesen
+        $sql = "SELECT * FROM citation ORDER BY RAND() LIMIT 1";
+        $result = $conn->query($sql);
+
+        // Ergebnis ausgeben, wenn es vorhanden ist
+        if ($result->num_rows > 0) {
+        $row = $result->fetch_assoc();
+        echo "<p>Zufällige Zitat:</p>";
+        echo "<blockquote>" . $row["quote"] . "</blockquote>";
+        } else {
+        echo "Kein Ergebnis gefunden.";
+        }
+
+        // Datenbankverbindung schließen
+        $conn->close();
+    ?>
+
+    <!-- HTML -->
     <div class="main">
         <div class="quotecontainer">
             <p class="quote">"When the past comes knocking, don't answer. It has nothing new to tell you."</p>
