@@ -6,10 +6,11 @@ const quotes = [
   "Happiness is not something ready made. It comes from your own actions.",
 ];
 
-const quoteContainer = document.querySelector(".quotecontainer");
-const quote = quoteContainer.querySelector(".quote");
+const quote = document.querySelector(".quote");
 
 setInterval(() => {
   const randomIndex = Math.floor(Math.random() * quotes.length);
   quote.textContent = quotes[randomIndex];
 }, 3000);
+
+setInterval();
