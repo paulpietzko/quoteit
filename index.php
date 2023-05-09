@@ -49,7 +49,7 @@
         echo "<p>Zufällige Zitat:</p>";
         echo "<blockquote>" . $row["quote"] . "</blockquote>";
         } else {
-        echo "Kein Ergebnis gefunden.";
+            echo "Kein Ergebnis gefunden.";
         }
 
         // Datenbankverbindung schließen
