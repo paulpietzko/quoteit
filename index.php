@@ -32,29 +32,29 @@
     <body>
         <!-- HTML -->
         <div class="main">
-        <div class="quotecontainer">
-            <!-- PHP -->
-            <?php
-                // Datenbankverbindung herstellen
-                $servername = "localhost";
-                $username = "root";
-                $password = "";
-                $dbname = "citation";
-                $conn = new mysqli($servername, $username, $password, $dbname);
+            <div class="quotecontainer">
+                <!-- PHP -->
+                <?php
+                    // Datenbankverbindung herstellen
+                    $servername = "localhost";
+                    $username = "root";
+                    $password = "";
+                    $dbname = "citation";
+                    $conn = new mysqli($servername, $username, $password, $dbname);
 
-                // SQL-Abfrage, um eine zufällige Zeile aus der Tabelle "citation" auszulesen
-                $sql = "SELECT * FROM citation ORDER BY RAND() LIMIT 1";
-                $result = $conn->query($sql);
-                
-                if ($result->num_rows > 0) {
-                    $row = $result->fetch_assoc();
-                    echo '<blockquote class="quote">' . $row["quote"] . "</blockquote>"; // quote
-                    echo '<blockquote class="author"">' . $row["author"] . "</blockquote>"; // author
-                }
+                    // SQL-Abfrage, um eine zufällige Zeile aus der Tabelle "citation" auszulesen
+                    $sql = "SELECT * FROM citation ORDER BY RAND() LIMIT 1";
+                    $result = $conn->query($sql);
+                    
+                    if ($result->num_rows > 0) {
+                        $row = $result->fetch_assoc();
+                        echo '<blockquote class="quote">' . $row["quote"] . "</blockquote>"; // quote
+                        echo '<blockquote class="author"">' . $row["author"] . "</blockquote>"; // author
+                    }
 
-                $conn->close(); // close connection
-            ?>
-        </div>
+                    $conn->close(); // close connection
+                ?>
+            </div>
         </div>
     </body>
 </html>

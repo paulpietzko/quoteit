@@ -1,11 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
 *{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
 }
 
 body {
-    background: black;
+    background-image: url("../images/background.png");
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .main {
@@ -15,10 +20,11 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
+    background: rgba(0, 0, 0, 0.9);
 }
 
 .quote {
-    padding: 0 150px 100px 150px;
+    padding: 0 150px 50px 150px;
     font-size: 3rem;
     color: white;
 }
