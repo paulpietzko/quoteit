@@ -28,6 +28,9 @@
         <link rel="manifest" href="favicon/site.webmanifest">
         <meta name="msapplication-TileColor" content="#da532c">
         <meta name="theme-color" content="#ffffff">
+
+        <!-- Scripts -->
+        <script src="js/scripts.js"></script>
     </head>
     <body>
         <!-- HTML -->
