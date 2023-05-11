@@ -16,10 +16,6 @@
 
         <!-- Links -->
         <link rel="stylesheet" href="css/styles.css">
-        <script src="js/scripts.js"></script>
-
-        <!-- FontAwsome -->
-        <script src="https://kit.fontawesome.com/9b6186208b.js" crossorigin="anonymous"></script>
 
         <!-- Favicon -->
         <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
@@ -29,7 +25,10 @@
         <meta name="msapplication-TileColor" content="#da532c">
         <meta name="theme-color" content="#ffffff">
 
-        <!-- Scripts -->
+        <!-- Scripts -->        
+        <script src="https://kit.fontawesome.com/9b6186208b.js" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/jquery-3.6.0.min.js"><\/script>')</script>
         <script src="js/scripts.js"></script>
     </head>
     <body>
