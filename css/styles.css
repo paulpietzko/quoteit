@@ -33,3 +33,13 @@ body {
     font-size: 2rem;
     color: #ffffff66;
 }
+
+.quote, .author {
+    opacity: 1;
+    transition: opacity 1s;
+  }
+  
+  .quote.fade-out, .author.fade-out {
+    opacity: 0;
+  }
+  
