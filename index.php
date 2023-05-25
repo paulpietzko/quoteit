@@ -17,6 +17,7 @@
         <!-- Links -->
         <link rel="stylesheet" href="css/styles.css">
         <script src="js/scripts.js"></script>
+        <script src="js/hits.js"></script>
 
         <!-- FontAwsome -->
         <script src="https://kit.fontawesome.com/9b6186208b.js" crossorigin="anonymous"></script>
