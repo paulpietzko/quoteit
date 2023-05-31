@@ -57,6 +57,7 @@
                     // Hits Spalte bei Datensatz mit ID inkrementieren
                     $id = $row["id"];
                     $updateSql = "UPDATE citation SET hits = hits + 1 WHERE id = $id";
+                    $conn->query($updateSql);
                 }
             ?>
         </div>
