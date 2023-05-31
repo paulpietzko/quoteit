@@ -1,3 +1,5 @@
+'use strict';
+
 let previousQuote = "";
 let wasPreviousSame = false;
 
