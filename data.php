@@ -14,11 +14,15 @@ $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
     $row = $result->fetch_assoc();
+    $response = array(
+        "quote" => $row["quote"],
+        "author" => $row["first_name"] . " " . $row["last_name"]
+    );
 } else {
-    $row = array("error" => -1);
+    $response = array("error" => -1);
 }
 
 $conn->close(); // close connection
 
-print json_encode($row);
+print json_encode($response);
 ?>

@@ -53,6 +53,11 @@
                 $row = $result->fetch_assoc();
                 echo '<blockquote class="quote">' . $row["quote"] . "</blockquote>"; // quote
                 echo '<blockquote class="author"">' . $row["first_name"] . " " . $row["last_name"] . "</blockquote>"; // author
+
+                // Hits Spalte bei Datensatz mit ID inkrementieren
+                $id = $row["id"];
+                $updateSql = "UPDATE citation SET hits = hits + 1 WHERE id = $id";
+                $conn->query($updateSql);
             }
 
             $conn->close(); // close connection
