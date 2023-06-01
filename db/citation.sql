@@ -36,7 +36,7 @@ CREATE TABLE IF NOT EXISTS `citation` (
   `updated` datetime DEFAULT CURRENT_TIMESTAMP,
   `hits` int DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=11 DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 --
 -- Daten für Tabelle `citation`
