@@ -1,3 +1,5 @@
+'use strict';
+
 let previousQuote = "";
 let wasPreviousSame = false;
 
@@ -17,9 +19,7 @@ function fetchQuote() {
             $(".author").text(data.author);
             $(".quote, .author").removeClass("fade-out");
             wasPreviousSame = false;
-          },
-          !wasPreviousSame ? 1000 : 0
-        );
+          }, !wasPreviousSame ? 1000 : 0);
         console.log(data.quote + " + " + data.author);
         }
       }
