@@ -40,8 +40,8 @@
             <?php
             // Datenbankverbindung herstellen
             $servername = "localhost";
-            $username = "root";
-            $password = "";
+            $username = "quotout";
+            $password = "qu0t_";
             $dbname = "citation";
             $conn = new mysqli($servername, $username, $password, $dbname);
 
@@ -53,7 +53,7 @@
                 $row = $result->fetch_assoc();
                 echo '<blockquote class="quote">' . $row["quote"] . "</blockquote>"; // quote
                 echo '<blockquote class="author"">' . $row["first_name"] . " " . $row["last_name"] . "</blockquote>"; // author
-
+            
                 // Hits Spalte bei Datensatz mit ID inkrementieren
                 $id = $row["id"];
                 $updateSql = "UPDATE citation SET hits = hits + 1 WHERE id = $id";
