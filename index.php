@@ -50,7 +50,7 @@
                 if ($result->num_rows > 0) {
                     $row = $result->fetch_assoc();
                     echo '<blockquote class="quote">' . $row["quote"] . "</blockquote>"; // quote
-                    echo '<blockquote class="author"">' . $row["author"] . "</blockquote>"; // author
+                    echo '<blockquote class="author"">' . $row["first_name"] . " " . $row["last_name"] . "</blockquote>"; // author
                 
                     // Hits Spalte bei Datensatz mit ID inkrementieren
                     $id = $row["id"];
