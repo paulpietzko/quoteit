@@ -6,23 +6,33 @@ $servername = "localhost";
 $username = "root";
 $password = "";
 $dbname = "citation";
-$conn = new mysqli($servername, $username, $password, $dbname);
 
-// SQL-Abfrage, um eine zufällige Zeile aus der Tabelle "citation" auszulesen
-$sql = "SELECT * FROM citation ORDER BY RAND() LIMIT 1";
-$result = $conn->query($sql);
+try {
+    $conn = new mysqli($servername, $username, $password, $dbname);
 
-if ($result->num_rows > 0) {
-    $row = $result->fetch_assoc();
+    // Prepared Statement, um eine zufällige Zeile aus der Tabelle "citation" auszulesen
+    $stmt = $conn->prepare("SELECT * FROM citation ORDER BY RAND() LIMIT 1");
+    $stmt->execute();
+    $result = $stmt->get_result();
+
+    if ($result->num_rows > 0) {
+        $row = $result->fetch_assoc();
+        $response = array(
+            "quote" => $row["quote"],
+            "author" => $row["first_name"] . " " . $row["last_name"]
+        );
+    } else {
+        $response = array("error" => -1);
+    }
+
+    $conn->close(); // close connection
+
+    print json_encode($response);
+} catch (mysqli_sql_exception $exception) {
     $response = array(
-        "quote" => $row["quote"],
-        "author" => $row["first_name"] . " " . $row["last_name"]
+        "quote" => 'Es gab ein Problem bei der Verbindung zur Datenbank. Bitte versuchen Sie es später erneut.',
+        "author" => $exception->getMessage() . " " . ""
     );
-} else {
-    $response = array("error" => -1);
+    print json_encode($response);
 }
-
-$conn->close(); // close connection
-
-print json_encode($response);
 ?>
