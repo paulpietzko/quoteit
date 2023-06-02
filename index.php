@@ -70,7 +70,6 @@
                 echo '<blockquote class="author">' . $exception->getMessage() . '</blockquote>';
             }
             ?>
-
         </div>
     </div>
 </body>

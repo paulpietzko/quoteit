@@ -3,8 +3,8 @@ header('Content-Type: application/json; charset=utf-8');
 
 // Datenbankverbindung herstellen
 $servername = "localhost";
-$username = "root";
-$password = "";
+$username = "quotout";
+$password = "qu0t_";
 $dbname = "citation";
 
 try {
@@ -18,6 +18,7 @@ try {
     if ($result->num_rows > 0) {
         $row = $result->fetch_assoc();
         $response = array(
+            "id" => $row["ID"],
             "quote" => $row["quote"],
             "author" => $row["first_name"] . " " . $row["last_name"]
         );
@@ -31,7 +32,7 @@ try {
 } catch (mysqli_sql_exception $exception) {
     $response = array(
         "quote" => 'Es gab ein Problem bei der Verbindung zur Datenbank. Bitte versuchen Sie es später erneut.',
-        "author" => $exception->getMessage() . " " . ""
+        "author" => $exception->getMessage()
     );
     print json_encode($response);
 }
