@@ -1,31 +1,36 @@
 "use strict";
 
-let previousQuote = "";
-let wasPreviousSame = false;
+var previousQuote = "";
 
 function fetchQuote() {
   $.getJSON("data.php", function (data) {
     if (data.error === -1) {
       console.error("An error occurred while fetching quote data.");
-    } else {
-      if (previousQuote === data.quote) {
-        wasPreviousSame = true;
-        fetchQuote();
-      } else {
-        previousQuote = data.quote;
-        $(".quote, .author").addClass("fade-out");
-        setTimeout(
-          function () {
-            $(".quote").text(data.quote);
-            $(".author").text(data.author);
-            $(".quote, .author").removeClass("fade-out");
-            wasPreviousSame = false;
-          },
-          !wasPreviousSame ? 1000 : 0
-        );
-      }
+      return;
     }
+    handleNewQuote(data);
   });
+}
+
+function handleNewQuote(data) {
+  if (previousQuote === data.quote) {
+    // Quote is the same as the previous one, fetch a new one
+    fetchQuote();
+  } else {
+    // New quote, update display
+    previousQuote = data.quote;
+    fadeOutAndUpdate(data.quote, data.author);
+  }
+}
+
+function fadeOutAndUpdate(quote, author) {
+  $(".quote, .author").addClass("fade-out");
+
+  setTimeout(function () {
+    $(".quote").text(quote);
+    $(".author").text(author);
+    $(".quote, .author").removeClass("fade-out");
+  }, 1000);
 }
 
 $(document).ready(function () {

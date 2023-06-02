@@ -25,6 +25,7 @@ class QuoteTest extends TestCase
             $row = $result->fetch_assoc();
 
             // Überprüfen, ob das Zitat und der Autor richtig formatiert sind
+            $this->assertIsString($row["ID"]);
             $this->assertIsString($row["quote"]);
             $this->assertIsString($row["first_name"]);
             $this->assertIsString($row["last_name"]);
