@@ -22,7 +22,7 @@ if ($id === 0) {
 }
 
 // Prepare and execute the SQL query
-$sql = "UPDATE citation SET hits = hits + 1 WHERE id = ?";
+$sql = "UPDATE citation SET hits = hits + 1, updated = CURRENT_TIMESTAMP WHERE id = ?";
 $stmt = $conn->prepare($sql);
 
 if ($stmt === false) {
@@ -34,7 +34,7 @@ $success = $stmt->execute();
 
 if ($success) {
     if ($stmt->affected_rows > 0) {
-        echo "Hits updated successfully";
+        echo "Hits and timestamp updated successfully";
     } else {
         echo "No rows updated. Check if the ID exists in the database.";
     }

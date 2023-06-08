@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Erstellungszeit: 01. Jun 2023 um 21:32
+-- Erstellungszeit: 08. Jun 2023 um 09:51
 -- Server-Version: 10.4.28-MariaDB
 -- PHP-Version: 8.2.4
 
@@ -42,16 +42,16 @@ CREATE TABLE `citation` (
 --
 
 INSERT INTO `citation` (`ID`, `quote`, `first_name`, `last_name`, `created`, `updated`, `hits`) VALUES
-(1, 'Die Wartezeit, die man bei Ärzten verbringt, würde in den meisten Fällen ausreichen, um selbst Medizin zu studieren.', 'Dieter', 'Hallervorden', '2023-04-06 10:54:17', '2023-04-06 10:54:17', 0),
-(2, 'Das Gewissen ist die Wunde, die nie heilt und an der keiner stirbt.', 'Friedrich', 'Hebbel', '2023-04-06 10:54:17', '2023-04-06 10:54:17', 0),
-(3, 'Ein Mann, der Viagra in der Tasche hat, der hat nicht unbedingt auch was im Kopf.', 'Paris', 'Hilton', '2023-04-06 10:54:17', '2023-04-06 10:54:17', 0),
-(4, 'Die Menschen sind nicht immer, was sie scheinen, aber selten etwas besseres.', 'Gotthold', 'Lessing', '2023-04-06 10:54:17', '2023-04-06 10:54:17', 0),
-(5, 'Die Revolution ist die erfolgreiche Anstrengung, eine schlechte Regierung loszuwerden und eine schlechtere zu errichten.', 'Oscar', 'Wilde', '2023-04-06 10:54:18', '2023-04-06 10:54:18', 0),
-(6, 'Gebete ändern die Welt nicht. Aber Gebete ändern die Menschen. Und die Menschen verändern die Welt.', 'Albert', 'Schweitzer', '2023-04-06 10:54:18', '2023-04-06 10:54:18', 0),
-(7, 'Wer die Wahrheit hören will, den sollte man vorher fragen, ob er sie ertragen kann.', 'Ernst', 'Hauschka', '2023-04-06 10:54:18', '2023-04-06 10:54:18', 0),
-(8, 'Wir suchen die Wahrheit, finden wollen wir sie aber nur dort, wo es uns beliebt.', 'Marie', 'Ebner-Eschenbach', '2023-04-06 10:54:18', '2023-04-06 10:54:18', 0),
-(9, 'Nicht den Tod sollte man fürchten, sondern dass man nie beginnen wird, zu leben.', 'Marcus', 'Aurelius', '2023-04-06 10:54:18', '2023-04-06 10:54:18', 0),
-(10, 'Man soll weder annehmen noch besitzen, was man nicht wirklich zum Leben braucht.', 'Mahatma', 'Gandhi', '2023-04-06 10:54:18', '2023-04-06 10:54:18', 0);
+(1, 'Die Wartezeit, die man bei Ärzten verbringt, würde in den meisten Fällen ausreichen, um selbst Medizin zu studieren.', 'Dieter', 'Hallervorden', '2023-04-06 10:54:17', '2023-04-06 10:54:17', 28),
+(2, 'Das Gewissen ist die Wunde, die nie heilt und an der keiner stirbt.', 'Friedrich', 'Hebbel', '2023-04-06 10:54:17', '2023-04-06 10:54:17', 13),
+(3, 'Ein Mann, der Viagra in der Tasche hat, der hat nicht unbedingt auch was im Kopf.', 'Paris', 'Hilton', '2023-04-06 10:54:17', '2023-04-06 10:54:17', 21),
+(4, 'Die Menschen sind nicht immer, was sie scheinen, aber selten etwas besseres.', 'Gotthold', 'Lessing', '2023-04-06 10:54:17', '2023-04-06 10:54:17', 12),
+(5, 'Die Revolution ist die erfolgreiche Anstrengung, eine schlechte Regierung loszuwerden und eine schlechtere zu errichten.', 'Oscar', 'Wilde', '2023-04-06 10:54:18', '2023-04-06 10:54:18', 30),
+(6, 'Gebete ändern die Welt nicht. Aber Gebete ändern die Menschen. Und die Menschen verändern die Welt.', 'Albert', 'Schweitzer', '2023-04-06 10:54:18', '2023-04-06 10:54:18', 25),
+(7, 'Wer die Wahrheit hören will, den sollte man vorher fragen, ob er sie ertragen kann.', 'Ernst', 'Hauschka', '2023-04-06 10:54:18', '2023-04-06 10:54:18', 24),
+(8, 'Wir suchen die Wahrheit, finden wollen wir sie aber nur dort, wo es uns beliebt.', 'Marie', 'Ebner-Eschenbach', '2023-04-06 10:54:18', '2023-04-06 10:54:18', 20),
+(9, 'Nicht den Tod sollte man fürchten, sondern dass man nie beginnen wird, zu leben.', 'Marcus', 'Aurelius', '2023-04-06 10:54:18', '2023-04-06 10:54:18', 15),
+(10, 'Man soll weder annehmen noch besitzen, was man nicht wirklich zum Leben braucht.', 'Mahatma', 'Gandhi', '2023-04-06 10:54:18', '2023-04-06 10:54:18', 19);
 
 --
 -- Indizes der exportierten Tabellen
